@@ -1,1 +1,84 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: rgb(10, 114, 41);
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.card {
+  text-align: center;
+  background: white;
+  margin: 5px;
+  height: 120px;
+  width: 80px;
+  font-size: 24px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 20px;
+}
+
+.card::after {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
+}
+
+.card.spade::before,
+.card.spade::after {
+  content: "\2660";
+}
+.card.club::before,
+.card.club::after {
+  content: "\2663";
+}
+.card.heart::before,
+.card.heart::after {
+  content: "\2665";
+  color: red;
+}
+.card.diamond::before,
+.card.diamond::after {
+  content: "\2666";
+  color: red;
+}
+
+#cambios-dificiles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.step-number {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.cards-row {
+  display: flex;
+  flex-direction: row;
+}
